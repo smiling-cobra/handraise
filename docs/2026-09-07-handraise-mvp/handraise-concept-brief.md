@@ -217,3 +217,18 @@ The product requirements phase should convert this concept into explicit policy 
 - thresholds for repeated-help and staff-substitution review;
 - notification, privacy, retention, appeal, and reporting policies;
 - success measures for useful matches, completed help, safety, trust, and participant autonomy.
+
+---
+
+What I decided rather than asked:
+
+- FR-5 amends the concept brief. "AI never publishes or rejects a request" plus a human pre-review queue is incompatible with automated-screening-only staffing — flagged requests would sit unseen. The PRD gives the screener two outcomes (publish / block-with-reason) and preserves autonomy through a 2-business-day human appeal instead. This is called out in three places (FR-5, §9, and a closing reviewer note) so it's a decision, not a drift.
+- Screening must fail closed. If the screening model is down, publication is held. Failing open would put unscreened requests in the feed.
+- AC-13 vs. append-only history is a genuine unresolved tension — deletion rights against an immutable bilateral record. Flagged as a top-4 technical risk rather than papered over.
+- Two org-validation assumptions (A1, A2) marked as assumed, not confirmed.
+
+Nine open questions carry owners — the ones that actually block build are Q2 (does an Israeli-ID verification vendor exist at pilot cost — if not, the whole tiered-verification model changes) and Q6 (the prohibited-category taxonomy must be enumerated and testable before FR-5 can be built).
+
+The riskiest assumption in the document is A5: that people tolerate the clarification step before confirming. If the confirmation rate comes back very low, that's the model failing, not the UI — worth deciding in advance what number would make you rethink it.
+
+Next step, pick one: refine for concision, resolve open questions, or hand off to write-srs. I can also publish this as a shareable artifact page if you want to circulate it for review.
