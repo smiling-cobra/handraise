@@ -1,7 +1,7 @@
-# PRD: Handraise MVP — Volunteering and Help Coordination Network
+# PRD: Handraise MVP — Mobile Help Coordination Network
 
 **Status:** Draft for review
-**Date:** 2026-09-07
+**Date:** 2026-10-12
 **Source material:** `handraise-concept-brief.md`
 **Pilot:** One city in Israel, 3-month closed pilot
 
@@ -9,11 +9,18 @@
 
 ## 1. Summary
 
-Handraise is a mobile help coordination network that connects people and mission-led organizations who need concrete help with people who freely choose to give it. Help is unpaid and voluntary; receiving help creates no debt or obligation to reciprocate.
+Handraise is a mobile help coordination network that connects people who need a helping hand with people nearby who are willing to give one. Its mission is to make both sides fast: **quickly find a helping hand, or quickly give one.** Asking for help should feel as easy as ordering food or a taxi: say what you need, see who can help, agree, and it's on.
 
-The MVP tests one question: **can Handraise produce safe, well-understood, mutually confirmed help engagements in a single pilot community?** It does this by making needs legible (AI turns informal descriptions into reviewable Help Requests), making fit discoverable (a matching feed rather than an urgency-ranked firehose), making commitment explicit (an Engagement exists only after both parties confirm), and making participation transparent (a factual, bilateral history that neither party controls unilaterally).
+Anyone can join, either as an **individual** or as an **organization**. Every account must declare its type at sign-up. Either kind of account can ask for help or offer it. The help itself is always given by people, hand to hand. Help is unpaid and freely given. Receiving help creates no debt and no obligation to give anything back.
 
-Handraise does not assign volunteers, broker labor, or decide who must help whom. It gives people the structure to find one another, understand a situation, assess trust and safety, and make their own decision. In the pilot, organizations participate to seed liquidity and test group-volunteering cases, not to turn Handraise into a general volunteer-operations platform.
+The MVP tests one question: **can Handraise get a person from "I need a hand" to a confirmed helper quickly, simply, and safely in a single pilot city?** It does this through four things:
+
+- **Fast asking.** The Requester describes the need in plain words, by text or voice. AI turns it into a clear Help Request the Requester reviews and publishes in about a minute.
+- **Fast offering.** Nearby people see the requests that fit them and can raise a hand with one tap.
+- **Clear agreement.** Help is on once both people confirm. Until then, either one can walk away at no cost.
+- **Enough trust to say yes.** Both sides can see identity status and a factual history of past help before deciding.
+
+The taxi comparison is about ease, not dispatch. Handraise does not assign volunteers, broker labor, or decide who must help whom. It gives people the structure to find one another, understand a situation, assess trust and safety, and make their own decision, with as little friction as possible. Nobody is "on shift" and nobody is obligated. Handraise is a place where people help people, not a gig marketplace or a volunteer-operations platform.
 
 ---
 
@@ -21,21 +28,22 @@ Handraise does not assign volunteers, broker labor, or decide who must help whom
 
 ### 2.1 Current state
 
-People who need small, concrete help — a leaking tap, a ride, help moving donated supplies, an hour of sorting donations — currently rely on personal networks, neighborhood WhatsApp and Facebook groups, or ad-hoc volunteer coordinators. These channels fail in specific, repeatable ways:
+When someone needs small, concrete help, such as fixing a leaking tap, getting a ride to a clinic, carrying a sofa up three floors, or sorting donations for an hour, there is no quick way to ask for it. Ordering food or a taxi takes a minute. Finding a helping hand can take days, or may never happen. Today people rely on personal networks, neighborhood WhatsApp and Facebook groups, or ad-hoc volunteer coordinators. These channels fail in specific, repeatable ways:
 
+- **Asking is slow and awkward.** You have to know which group to post in, write a message from scratch, and wait for a reply that may never come. Many people never ask at all, especially elderly people and those new to a city.
+- **Offering is just as hard.** People who would gladly help have no way to say "I'm free this afternoon and I can fix things." Their willingness is invisible, so help is available but nobody can find it.
 - **Needs are unstructured.** A message saying "someone help my mother" carries no scope, timing, location, tools, physical conditions, or risk information. Helpers cannot assess fit without a private negotiation, so most scroll past.
 - **Trust is one-directional or absent.** A stranger entering a home is evaluated on a profile photo and a group's implicit vouching. Helpers, symmetrically, have no way to know whether a Requester's previous requests were accurate, respectful, or safe.
 - **Commitment is ambiguous.** "I can maybe come Thursday" is not a commitment, but it is often treated as one. No-shows are invisible to everyone except the person who waited.
-- **Willing helpers are undiscoverable.** People who would help have no way to advertise what they are open to. Supply exists but is not addressable.
 - **Safety is unmanaged.** Physical risk, unsafe working conditions, and exploitation (unpaid help quietly substituting for paid staff) are handled by group-admin judgment or not at all.
 
-Organizations face the mirror problem: shelters and community projects coordinate shifts in spreadsheets and group chats, with no reliable record of who confirmed what.
+Organizations face the same problem at a larger scale. Shelters, community projects, and local initiatives coordinate helpers through spreadsheets and group chats. They have no fast way to reach new helpers and no reliable record of who confirmed what.
 
 ### 2.2 Why this matters
 
-Israel has a strong volunteering culture and dense civil-society infrastructure, but the coordination layer is informal and does not scale past a coordinator's personal reach. The cost of doing nothing is not dramatic failure — it is steady, invisible leakage: needs that go unmet because nobody safely visible could see them, and willing helpers who never find a use for their time.
+Everyday apps have taught people to expect that what they need can be arranged from a phone in minutes. Help between people hasn't caught up. Israel has a strong volunteering culture and dense civil-society infrastructure, but the way help gets coordinated is informal and only reaches as far as one coordinator's or one group's personal network. The cost of doing nothing is not a dramatic failure. It is a steady loss nobody sees: needs go unmet because the people who could help never saw them, and willing helpers never find a use for their time.
 
-For the pilot specifically, proving that structured, mutually confirmed, safety-screened volunteer engagements _actually complete_ at meaningful rates is the precondition for everything else in the roadmap. If mutual confirmation adds enough friction that people revert to WhatsApp, the model is wrong and we should know inside three months.
+For the pilot, the thing to prove is that a need can reach a confirmed helper **quickly**, and that confirmed help **actually happens** at meaningful rates. Everything else in the roadmap depends on it. If safety and confirmation steps add so much friction that asking through Handraise is slower than posting in a WhatsApp group, the model is wrong, and we should know within three months.
 
 ---
 
@@ -43,25 +51,29 @@ For the pilot specifically, proving that structured, mutually confirmed, safety-
 
 ### 3.1 Primary users
 
-- **Individual Requester** — a person with a concrete, bounded need they cannot meet alone (elderly resident, someone with limited mobility, a parent without a car). **Need:** describe a situation in ordinary language and have it become something a stranger can safely evaluate. **Success:** a suitable helper confirms, arrives, and the help happens as described.
-- **Individual Helper** — a person with time, a skill, or a tool who wants to contribute. **Need:** discover requests that genuinely fit their capabilities, availability, and comfort, without being pressured. **Success:** they find a request they can actually do, understand exactly what is expected before committing, and the situation matches the description on arrival.
-- **Organization Representative** — a staff member or coordinator at a registered nonprofit (עמותה) or public benefit company (חל"צ) publishing requests on the organization's behalf. **Need:** seed legitimate volunteer opportunities for the pilot, define basic roles, shifts, and capacity, and know who has actually confirmed. **Success:** the organization can participate safely in the pilot and group requests fill with helpers who show up, with an individual record per helper.
+Every account is either an **Individual** or an **Organization**, declared at sign-up. Separately from account type, the role in each interaction depends on context: whoever asks for help is the **Requester**, and whoever gives it is the **Helper**.
 
-Roles attach to interactions, not accounts. One person can be a Requester on Tuesday and a Helper on Thursday through a single profile.
+- **Individual as Requester:** a person with a concrete, bounded need they cannot meet alone, such as an elderly resident, someone with limited mobility, or a parent without a car. **Need:** ask for help in about a minute, in ordinary words, and have the request become something a stranger can quickly and safely evaluate. **Success:** a suitable helper confirms quickly, arrives, and the help happens as described.
+- **Individual as Helper:** a person with time, a skill, or a tool who wants to help. **Need:** see nearby requests that genuinely fit their capabilities, availability, and comfort, raise a hand in one tap, and never feel pressured. **Success:** they find a request they can actually do, understand exactly what is expected before committing, and find the situation matches the description on arrival.
+- **Organization:** a registered nonprofit (עמותה) or public benefit company (חל"צ) with its own account, operated by people from the organization (details in FR-2). **Need:** publish requests for helpers quickly, including roles, shifts, and capacity, reach helpers beyond its own network, and know who has actually confirmed. An organization may also offer help to others. **Success:** requests fill with helpers who show up, and each helper has an individual record.
+
+Roles attach to interactions, not accounts. One person can be a Requester on Tuesday and a Helper on Thursday with the same profile. The same applies to organizations.
 
 ### 3.2 Secondary users
 
-- **Handraise Moderator/Operator** — reviews appeals against automated screening decisions, handles user reports, and reviews escalated exploitation-pattern items. **Success:** every appeal and report is resolved within SLA with a recorded rationale.
-- **Pilot Program Lead** — needs visibility into matching quality, completion rates, and safety incidents to decide whether the model works.
+- **Handraise Moderator/Operator:** reviews appeals against automated screening decisions, handles user reports, and reviews escalated exploitation-pattern items. **Success:** every appeal and report is resolved within SLA with a recorded rationale.
+- **Pilot Program Lead:** needs visibility into time to match, matching quality, completion rates, and safety incidents to decide whether the model works.
 
 ### 3.3 Core use cases
 
-1. **Home repair for an elderly person.** Requester describes a leaking tap and limited mobility; AI structures scope, tools, area, timing, and a materials-expense cap; a nearby Helper with declared plumbing experience expresses interest; both agree terms and confirm.
-2. **Safety-sensitive home task.** A Requester needs help replacing a broken outdoor light fixture using a ladder and power tools. The request is flagged safety-sensitive; the Helper may upload relevant supporting evidence (labelled user-provided and unverified), the Requester evaluates it, and both explicitly attest before confirmation.
-3. **Animal shelter shift coverage.** A validated shelter publishes a request for six Helpers across two shifts, with physical conditions and clothing requirements. Each Helper confirms and completes an individually recorded Engagement.
-4. **Community event support.** A mission-led event requests setup, visitor guidance, accessibility support, and cleanup roles — screened to confirm the roles serve the mission rather than replacing routine paid staffing.
-5. **Standing availability.** A person publishes an Availability Offer for minor repairs and event setup on weekends within a 10 km radius. Requesters discover it and open a request-scoped conversation. The person may decline every inquiry with no penalty.
-6. **Declining without cost.** A Helper reads a request, decides it is not for them, and moves on. Nothing is recorded and nothing is signalled to the Requester.
+1. **Quick everyday help.** A Requester needs two people to carry a sofa up three floors this evening. They describe it in one sentence by voice. AI drafts the request, and the Requester reviews and publishes it in about a minute. Nearby Helpers who opted in are notified, two of them raise a hand, and the Requester confirms both.
+2. **Home repair for an elderly person.** A Requester describes a leaking tap and their limited mobility. AI structures the scope, tools, area, timing, and a cap on materials expenses. A nearby Helper with declared plumbing experience expresses interest, and both agree on terms and confirm.
+3. **Safety-sensitive home task.** A Requester needs help replacing a broken outdoor light fixture using a ladder and power tools. The request is flagged safety-sensitive; the Helper may upload relevant supporting evidence (labelled user-provided and unverified), the Requester evaluates it, and both explicitly attest before confirmation.
+4. **Animal shelter shift coverage.** A validated shelter's Organization account publishes a request for six Helpers across two shifts, with physical conditions and clothing requirements. Each Helper confirms and completes an individually recorded Engagement.
+5. **Community event support.** A mission-led event requests helpers for setup, visitor guidance, accessibility support, and cleanup. Screening confirms the roles serve the mission rather than replacing routine paid staff.
+6. **Standing availability.** A person publishes an Availability Offer for minor repairs and event setup on weekends within a 10 km radius. Requesters discover it and open a conversation tied to a specific request. The person may decline every inquiry with no penalty.
+7. **Organization offering help.** A community organization publishes an Availability Offer: its volunteers can help elderly residents with grocery runs on Friday mornings. Individual Requesters discover it and ask through a specific Help Request.
+8. **Declining without cost.** A Helper reads a request, decides it is not for them, and moves on. Nothing is recorded and nothing is signalled to the Requester.
 
 ---
 
@@ -69,12 +81,13 @@ Roles attach to interactions, not accounts. One person can be a Requester on Tue
 
 ### 4.1 Goals
 
-- **G1.** Turn an informal description of a need into a structured, self-explanatory Help Request that a stranger can evaluate without a preliminary conversation — with the Requester in control of what gets published.
-- **G2.** Make commitment unambiguous: an Engagement exists only on explicit bilateral confirmation, and declining before that is costless and invisible.
-- **G3.** Give both parties a reciprocal, factual basis for trust — engagement history and structured dimensions, never a single opaque score.
-- **G4.** Keep personal information purpose-bound: precise address, phone number, and sensitive need detail are disclosed only when a specific engagement requires them.
-- **G5.** Prevent the categories of harm the concept names — prohibited activity, unacknowledged risk, and unpaid help substituting for paid staffing — without treating users as suspects.
-- **G6.** Support group volunteering (roles, shifts, capacity) without one person's cancellation distorting anyone else's record.
+- **G1. Fast asking.** A Requester can go from describing a need in ordinary words to a published Help Request in about a minute. The request must be clear enough for a stranger to evaluate without a preliminary conversation, and the Requester controls what gets published.
+- **G2. Fast offering.** A Helper can find nearby requests that fit them and raise a hand in one tap. Willing helpers can make themselves discoverable through Availability Offers.
+- **G3. Clear, lightweight commitment.** An Engagement exists only when both parties explicitly confirm, and confirming must be a quick act, not a negotiation. Declining before confirmation costs nothing and is invisible to others.
+- **G4. Trust on both sides.** Both parties get a reciprocal, factual basis for trust: engagement history and structured ratings, never a single opaque score. This applies equally to Individual and Organization accounts.
+- **G5. Purpose-bound privacy.** Precise address, phone number, and sensitive details of a need are disclosed only when a specific engagement requires them.
+- **G6. Safety without friction for legitimate requests.** Prevent the categories of harm the concept names (prohibited activity, unacknowledged risk, and unpaid help substituting for paid staff) without treating users as suspects or slowing down legitimate requests.
+- **G7. Individuals and organizations as first-class accounts.** Both account types can ask for and offer help. Group requests (roles, shifts, capacity) are supported, and one person's cancellation never affects anyone else's record.
 
 ### 4.2 Non-goals
 
@@ -86,7 +99,9 @@ Roles attach to interactions, not accounts. One person can be a Requester on Tue
 - **Not** a childcare or vulnerable-adult care platform. Direct care involving children and vulnerable adults is prohibited in the MVP.
 - **Not** multi-city. One pilot city; geographic expansion is out of scope.
 - **No** web client in the MVP. Native iOS and Android only.
-- **No** automated matching that commits anyone. Recommendations are suggestions; every commitment is a human act.
+- **Not** a dispatch service. Handraise never assigns a helper to a request, and no automated matching commits anyone. Recommendations are suggestions, and every commitment is a human act.
+- **Not** a guaranteed-response service. Handraise makes help fast to ask for and fast to find, but it cannot promise that someone will say yes, and it never applies pressure to make that happen.
+- **Not** a gig or labor marketplace. Help is unpaid and freely given, by individuals and organizations alike.
 
 ---
 
@@ -94,26 +109,33 @@ Roles attach to interactions, not accounts. One person can be a Requester on Tue
 
 ### 5.1 Functional requirements
 
-**FR-1 · Account, identity, and tiered verification**
+**FR-1 · Sign-up, account type, and tiered verification**
 
-- One account per person, with contextual Requester and Helper roles. No permanent role types.
+- At sign-up, every account must declare its type: **Individual** or **Organization**. The choice is required and cannot be skipped. Changing the type later is not self-service and goes through support, because an account's trust history belongs to the type it was earned under.
+- One Individual account per person. Requester and Helper are contextual roles in an interaction, not account types.
+- Sign-up must be quick. An Individual can create a Tier 0 account and publish a first request or raise a hand without completing any optional step first.
+- The verification tiers below apply to Individual accounts. Organization accounts follow FR-2.
 - **Tier 0 (Registered / identity unverified):** verified email and phone number. May create a profile, publish a Help Request or Availability Offer, browse, express interest, message within a request thread, and confirm an Engagement. Public surfaces must display a clear descriptive label such as **Identity unverified**.
 - **Tier 1 (Verified):** government ID document plus liveness check via a third-party identity provider. Not required for individual participation, but intended as a stronger trust signal if a viable Israeli identity vendor is available at acceptable cost and legal posture for the pilot. Public surfaces must display Tier 1 accounts with a clear verification check mark whenever Tier 1 is active.
 - Identity verification is **private**. Only the status label is public; the underlying identity data is never shown to other users. The person controls which parts of their identity (display name, photo, city, age band) are public.
 - Where identity status is shown, the distinction between verified and unverified accounts must be legible at a glance and must not imply that Handraise has verified anything beyond identity.
 - Failed or inconclusive verification produces a clear reason and a retry path; three consecutive failures route to human review rather than a hard lock.
 
-**FR-2 · Organization validation**
+**FR-2 · Organization accounts and validation**
 
+- An Organization account is a full account with its own profile, requests, offers, and trust record. It is created by a named person who becomes its **account owner**. The owner must complete the strongest identity-verification tier available in the pilot and remains accountable for activity on the account.
+- The owner may add other named **operators**, such as staff or coordinators. Operators sign in with their own Individual accounts and act on behalf of the Organization, so there is no shared organization password. Every action is recorded against the operator who took it. In the MVP all operators have the same permissions, with no role hierarchy.
 - Eligible organization types in the MVP: registered nonprofit associations (עמותה) and public benefit companies (חל"צ), evidenced by active status in the national registry.
-- A **purpose-and-beneficiary test** is applied per organization at validation and per request at screening. Legal form alone does not confer eligibility; an eligible organization may still publish an ineligible request.
-- An organization must be validated before its **first** Help Request may be published.
-- Organization Representatives act through their own personal accounts, linked to the organization with a stated role. They must complete the strongest identity-verification tier available in the pilot. The organization does not have its own login.
+- A **purpose-and-beneficiary test** is applied per organization at validation and per request at screening. Legal form alone does not confer eligibility, and an eligible organization may still publish an ineligible request.
+- An Organization must be validated before its **first** Help Request or Availability Offer is published. Before validation it can set up its profile and prepare drafts. Validation against registry data should be automated where possible, so it completes within minutes. When manual review is needed, it completes within **2 business days**.
+- When an Organization acts as a **Helper**, it must name the person or people who will attend before confirmation. Their display names and identity status are shown to the Requester, who confirms knowing who will arrive.
 - A current Certificate of Proper Management (אישור ניהול תקין), when supplied, is displayed as an additional trust badge. It is not required for validation.
 
 **FR-3 · Progressive profile and capability claims**
 
-- Profile fields: chosen public identity; interests and causes; self-declared capabilities, experience, tools, languages; availability; travel radius; uploaded supporting documents; user-controlled context about personal needs.
+- Individual profile fields: chosen public identity; interests and causes; self-declared capabilities, experience, tools, languages; availability; travel radius; uploaded supporting documents; user-controlled context about personal needs.
+- Organization profile fields: name and logo; mission and areas of activity; registry number and validation status; service area; the kinds of help it asks for or offers.
+- A profile only needs the minimum to start. Everything else can be added later, and the app never blocks a first request or a first raised hand on profile completeness.
 - Every claim displays its **source and verification status**. User-uploaded evidence is never labelled "verified".
 - **Private matching preferences** (excluded activities, personal constraints, comfort limits) improve recommendations and are never exposed to other users.
 - AI may _suggest_ profile additions from conversation or repeated activity. The person must confirm or edit a suggestion before it becomes public. AI never edits a public profile directly.
@@ -121,10 +143,12 @@ Roles attach to interactions, not accounts. One person can be a Requester on Tue
 
 **FR-4 · AI-assisted Help Request creation**
 
+- **Speed target:** a typical request can be described, reviewed, and published in about **one minute**, and within about **two minutes** for elderly Requesters (AC-24).
 - The Requester describes a need in ordinary language (text or voice-to-text, Hebrew or English).
-- AI proposes a structured Help Request: scope, desired outcome, location area, schedule, effort estimate, roles, capacity, direct expenses, relevant capabilities, physical conditions, safety considerations. It identifies missing information and asks for it.
-- The Requester **reviews, edits, and approves** every field before publication. AI never publishes.
-- A structured request may also be created manually without AI assistance.
+- Only three things are required to publish: **what** is needed, **where** (area), and **when**. All other fields are optional unless they apply to the request: desired outcome, effort estimate, tools, expenses, relevant capabilities, physical conditions, and roles and capacity for group requests.
+- AI proposes a structured Help Request from the description. It asks follow-up questions only for missing required information or a detected safety consideration, never for optional detail.
+- The Requester **reviews, edits, and approves** the request on a single review screen before publication. AI never publishes.
+- A request may also be created manually without AI assistance, or started from one of the Requester's previous requests.
 
 **FR-5 · Automated screening, blocking, and appeal**
 
@@ -134,17 +158,20 @@ Roles attach to interactions, not accounts. One person can be a Requester on Tue
 - **Outcome A — Published.** The request goes live, with safety-sensitive labelling and required attestations applied where relevant.
 - **Outcome B — Blocked.** The request remains a private draft. The Requester receives the specific category matched and a plain-language explanation, then may edit and resubmit or **appeal to a human**.
 - There is no "pending review" state. Nothing waits on a human to become visible.
+- Screening must feel instant: a decision is returned within **10 seconds** for 95% of submissions.
 - Appeals are resolved by a human within **2 business days**, with a recorded rationale. Emergency-intent detections are never appealable; they redirect to national emergency services (Police 100, MDA 101, Fire 102, ERAN 1201).
 
 **FR-6 · Availability Offers**
 
-- A person publishes what kinds of help they are open to, travel area, availability windows, preferences, and relevant capabilities.
+- An Individual or a validated Organization publishes what kinds of help they are open to, travel area, availability windows, preferences, and relevant capabilities.
 - An Availability Offer is explicitly **an invitation to connect, not a standing obligation**. This must be stated in the UI at publication and on the offer itself.
 - Requesters discover offers and open a conversation **in the context of a specific Help Request**. There is no free-form messaging from an offer.
 
 **FR-7 · Discovery and matching**
 
 - Fit-ranked feed, keyword and filter search, and opt-in notifications for new matching requests.
+- Opt-in notifications for a new matching request are delivered within **1 minute** of publication.
+- **Raising a hand** is a single tap from the feed, the request page, or the notification.
 - Ranking inputs: declared interests and capabilities, availability overlap, distance, private preferences, and safety requirements.
 - **Urgency is displayed as context and never used to boost ranking.** No countdown timers, scarcity language, or pressure mechanics anywhere in the product.
 - Requesters can browse Availability Offers and public profiles.
@@ -156,17 +183,19 @@ Roles attach to interactions, not accounts. One person can be a Requester on Tue
 - All pre-confirmation communication happens in-app in the request thread.
 - Either party may leave a thread at any time before confirmation, with no record and no notification framing it as a rejection.
 
-**FR-9 · Clarification and mutual confirmation**
+**FR-9 · Raising a hand and mutual confirmation**
 
-- Expressing interest is explicitly **not a commitment**, stated in the UI at the point of action.
-- Before confirmation, parties clarify: exact scope and outcome; date, time, duration, location; roles and responsibilities; tools, materials, access, working conditions; safety concerns and relevant capability claims; reimbursable expense categories and cap; how to communicate a change.
+- Raising a hand (expressing interest) is explicitly **not a commitment**, stated in the UI at the point of action.
+- The Requester sees everyone who raised a hand, with their trust record, and can chat with any of them in the request thread (FR-8) if something needs clarifying.
+- **Confirmation is lightweight.** The Requester picks a Helper and confirms. The Helper confirms the same terms with one tap. Safety-sensitive requests also require attestation (FR-15). No other step is required.
+- The terms both parties confirm are limited to **what, when, and where**, plus only the items that apply to the request: expense cap (FR-19), role and shift (FR-12), safety attestation (FR-15), and named attendees when the Helper is an Organization (FR-2). Anything else, such as tools, access, or how to communicate a change, can be agreed in the thread but is never a required step.
 - An Engagement is created **only** when both parties have explicitly confirmed the same agreed terms. A single-sided confirmation creates nothing.
 - A **material change** to scope, schedule, safety conditions, or expense terms after confirmation requires renewed consent from both parties. Until both re-confirm, the previously agreed terms stand and the change is not in effect.
 
 **FR-10 · Staged disclosure**
 
 - Before confirmation: display name, public profile, general location area (neighbourhood-level, not an address).
-- On mutual confirmation: precise address and phone number are disclosed to the counterparty only, with an in-app notice to both parties that this has happened.
+- On mutual confirmation: precise address and phone number are disclosed to the counterparty only, with an in-app notice to both parties that this has happened. When the counterparty is an Organization, they are disclosed only to the operator handling the engagement and the named attendees, not to every operator.
 - On engagement closure: contact details remain visible to the counterparty for **14 days**, then are hidden from the engagement view. The factual record persists.
 
 **FR-11 · Engagement lifecycle**
@@ -178,9 +207,9 @@ States: `interest_expressed` → `confirmed` → `in_progress` → `completed` |
 - Post-confirmation cancellation and no-show are recorded and count toward the public factual record, with the notice period captured.
 - The Helper reports the outcome; the Requester confirms or disputes it. An unresolved dispute is recorded as disputed rather than resolved in either party's favor.
 
-**FR-12 · Group volunteering**
+**FR-12 · Group requests**
 
-- A Help Request may define multiple **roles**, multiple **shifts**, and a **capacity** per role/shift.
+- Any account, Individual or Organization, may create a group request. A Help Request may define multiple **roles**, multiple **shifts**, and a **capacity** per role/shift.
 - Each Helper confirms an **individual Engagement** against a specific role and shift, with an independently recorded outcome.
 - One person's cancellation or no-show must not affect any other participant's record.
 - The Requester sees confirmed-versus-capacity per role and shift, and is notified when a confirmed Helper cancels.
@@ -199,7 +228,9 @@ Publicly visible on a profile:
 - Completed engagement count, as Requester and as Helper, separately.
 - Post-confirmation cancellation count and no-show count, with tenure context (e.g. "2 cancellations across 31 engagements").
 - Per-dimension aggregate ratings, shown only once a **minimum of 3 ratings** on that dimension exists.
-- Identity-status label (verification check mark for Tier 1; descriptive unverified label for Tier 0) and organization affiliation.
+- Account type (Individual or Organization), always shown.
+- For Individuals: identity-status label (verification check mark for Tier 1; descriptive unverified label for Tier 0), and any organizations they operate for.
+- For Organizations: validation status, and the Certificate of Proper Management badge when supplied.
 
 Never public: free-text feedback, private preferences, identity documents, precise location, sensitive need details, uploaded supporting evidence documents (visible only to a counterparty within a specific engagement context).
 
@@ -250,7 +281,7 @@ Blocked in the MVP: illegal, deceptive, or deliberately harmful activity; emerge
 
 ### 5.2 Content, data, and integration requirements
 
-**Core entities:** `User`, `Profile`, `CapabilityClaim`, `Organization`, `OrganizationMembership`, `HelpRequest`, `RequestRole`, `Shift`, `AvailabilityOffer`, `Interest`, `Engagement`, `EngagementTerms`, `Attestation`, `EvidenceDocument`, `MessageThread`, `Feedback`, `Report`, `ScreeningDecision`, `Appeal`, `ModerationAction`, `PatternReviewItem`.
+**Core entities:** `Account` (type: Individual or Organization), `Profile`, `CapabilityClaim`, `Organization`, `OrganizationOperator`, `NamedAttendee`, `HelpRequest`, `RequestRole`, `Shift`, `AvailabilityOffer`, `Interest`, `Engagement`, `EngagementTerms`, `Attestation`, `EvidenceDocument`, `MessageThread`, `Feedback`, `Report`, `ScreeningDecision`, `Appeal`, `ModerationAction`, `PatternReviewItem`.
 
 **Help Request states:** `draft` → `screening` → `published` | `blocked`; `published` → `filled` | `closed` | `expired` | `withdrawn`. A blocked request may be edited and resubmitted, or appealed.
 
@@ -274,6 +305,7 @@ Blocked in the MVP: illegal, deceptive, or deliberately harmful activity; emerge
 
 ### 5.3 Quality, safety, and failure requirements
 
+- **Speed:** the core flows have explicit targets measured in the pilot: publishing a typical request takes about one minute of the user's time (about two minutes for elderly Requesters); screening returns within 10 seconds (p95); matching notifications arrive within 1 minute; raising a hand takes one tap; confirmation takes one tap per party. Safety steps such as attestation and evidence appear only on requests that need them and never add steps to ordinary requests.
 - **Privacy:** purpose-bound disclosure is enforced server-side, not merely hidden in the UI. Private preferences are never returned by any API a counterparty can reach. Retention periods are defined per data class before launch, with identity documents held for the minimum period the verification flow requires.
 - **Data subject rights:** access, correction, and deletion requests are supported. The exact deletion model remains a pre-SRS design decision because it must remove personal data without allowing one user to erase the counterparty's factual history from an append-only record.
 - **AI boundaries — hard constraints:** AI must never publish a request, alter a public profile, create or confirm an Engagement, or leave feedback. Every AI output that affects another user passes through explicit human confirmation.
@@ -291,24 +323,25 @@ Blocked in the MVP: illegal, deceptive, or deliberately harmful activity; emerge
 
 ### 6.1 In scope for v1
 
-1. Single account with contextual Requester/Helper roles (FR-1).
-2. Tier 0 identity verification, plus Tier 1 verification if vendor feasibility, cost, and legal posture support it for the pilot; organization validation for עמותות and חל"צ (FR-1, FR-2).
-3. Progressive profile with capability claims, privacy controls, and user-confirmed AI suggestions (FR-3).
-4. AI-assisted Help Request creation with Requester approval (FR-4).
-5. Automated screening with block-and-appeal; no pending-review queue (FR-5).
-6. Availability Offers (FR-6).
-7. Fit-based feed, search, notifications, request-scoped communication (FR-7, FR-8).
-8. Clarification and bilateral confirmation with material-change re-consent (FR-9).
-9. Staged disclosure of address and phone (FR-10).
-10. Compact engagement lifecycle with append-only history and neutral pre-commitment refusal (FR-11).
-11. Group roles, shifts, capacity, individual engagement tracking (FR-12).
-12. Structured double-blind mutual feedback; aggregate-only public trust record (FR-13, FR-14).
-13. Narrow, explicit safety-sensitive labelling, evidence upload, bilateral attestation, prohibited categories, reporting, moderation, appeals (FR-15 – FR-17).
-14. Exploitation-pattern observation and operator escalation, with optional user-facing prompts where policy calls for them (FR-18).
-15. Expense terms recorded, no money movement (FR-19).
-16. Hebrew (RTL) and English (FR-20).
-17. Native iOS and Android apps.
-18. Internal operator console for appeals, reports, and pattern review items.
+1. Quick sign-up with a required choice of account type, Individual or Organization, and contextual Requester/Helper roles (FR-1).
+2. Tier 0 identity verification, plus Tier 1 verification if vendor feasibility, cost, and legal posture support it for the pilot (FR-1).
+3. Organization accounts for עמותות and חל"צ: a verified owner, named operators with equal permissions, registry validation, and named attendees when the Organization helps (FR-2).
+4. Progressive profiles for both account types, with capability claims, privacy controls, and user-confirmed AI suggestions (FR-3).
+5. AI-assisted Help Request creation with Requester approval, targeting about one minute to publish (FR-4).
+6. Automated screening within seconds, with block-and-appeal and no pending-review queue (FR-5).
+7. Availability Offers from Individuals and Organizations (FR-6).
+8. Fit-based feed, search, prompt matching notifications, one-tap raise a hand, request-scoped communication (FR-7, FR-8).
+9. Lightweight bilateral confirmation with material-change re-consent (FR-9).
+10. Staged disclosure of address and phone (FR-10).
+11. Compact engagement lifecycle with append-only history and neutral pre-commitment refusal (FR-11).
+12. Group requests with roles, shifts, capacity, and individual engagement tracking, for both account types (FR-12).
+13. Structured double-blind mutual feedback; aggregate-only public trust record (FR-13, FR-14).
+14. Narrow, explicit safety-sensitive labelling, evidence upload, bilateral attestation, prohibited categories, reporting, moderation, appeals (FR-15 – FR-17).
+15. Exploitation-pattern observation and operator escalation, with optional user-facing prompts where policy calls for them (FR-18).
+16. Expense terms recorded, no money movement (FR-19).
+17. Hebrew (RTL) and English (FR-20).
+18. Native iOS and Android apps.
+19. Internal operator console for appeals, reports, organization validation, and pattern review items.
 
 ### 6.2 Out of scope for v1
 
@@ -320,7 +353,9 @@ Blocked in the MVP: illegal, deceptive, or deliberately harmful activity; emerge
 - Childcare, vulnerable-adult care, and safeguarding workflows (DBS-equivalent checks).
 - Emergency and crisis response.
 - Multi-city or multi-jurisdiction operation.
-- Organization-level accounts, org admin hierarchies, delegated permissions beyond a simple representative link.
+- Organization role hierarchies and per-operator permissions. In v1 every operator of an Organization account has the same permissions.
+- Organization types other than עמותות and חל"צ, such as businesses, municipalities, or informal community groups.
+- Dispatch or auto-assignment of any kind, and guaranteed response times for finding a helper.
 - Public API, third-party integrations, volunteer-hours export for institutional reporting.
 - Explanations of _why_ a specific recommendation was made.
 - Free-text public reviews.
@@ -328,7 +363,7 @@ Blocked in the MVP: illegal, deceptive, or deliberately harmful activity; emerge
 
 ### 6.3 Future considerations
 
-Additional exchange types as explicitly separate engagement models (paid, reciprocal); platform-verified credentials; expanded safeguarding enabling care categories; richer organization administration; transparent matching explanations; multi-city expansion using the jurisdiction configuration layer; recurring and standing engagements. **None of these should be pre-built or partially scaffolded in v1** — the concept's value depends on the MVP model staying small and legible.
+Additional exchange types as explicitly separate engagement models (paid, reciprocal); platform-verified credentials; expanded safeguarding enabling care categories; richer organization administration (roles, permissions, more organization types); transparent matching explanations; multi-city expansion using the jurisdiction configuration layer; recurring and standing engagements. **None of these should be pre-built or partially scaffolded in v1** — the concept's value depends on the MVP model staying small and legible.
 
 ---
 
@@ -355,14 +390,14 @@ Additional exchange types as explicitly separate engagement models (paid, recipr
 
 **Privacy**
 
-- AC-11. Precise address and phone number are unobtainable — through UI or API — by a user who is not a confirmed counterparty on that Engagement.
+- AC-11. Precise address and phone number are unobtainable, through UI or API, by anyone who is not a confirmed counterparty on that Engagement. When the counterparty is an Organization, only the operator handling the engagement and the named attendees can obtain them.
 - AC-12. Private matching preferences are never returned by any endpoint reachable by another user.
 - AC-13. Before build begins, the product and technical plan define and test a deletion model that removes personal data without allowing one user to erase the counterparty's factual history.
 
 **Trust record**
 
 - AC-14. No composite trust score exists anywhere in the product.
-- AC-15. Public profiles show completed, cancelled, and no-show counts with tenure context; dimension aggregates appear only at ≥3 ratings; identity status always appears either as a Tier 1 verification check mark when Tier 1 is active or a clear unverified label otherwise; free text is never public.
+- AC-15. Public profiles show account type and completed, cancelled, and no-show counts with tenure context; dimension aggregates appear only at ≥3 ratings; free text is never public. Individual profiles always show identity status, either as a Tier 1 verification check mark when Tier 1 is active or a clear unverified label otherwise. Organization profiles always show validation status.
 - AC-16. In a group request, one Helper's cancellation changes no other Helper's record.
 
 **Discovery**
@@ -375,28 +410,50 @@ Additional exchange types as explicitly separate engagement models (paid, recipr
 - AC-19. Appeals resolve within 2 business days; safety reports within 4 hours — measured, not asserted.
 - AC-20. All core flows are usable with VoiceOver and TalkBack, and in RTL, verified on device.
 
+**Accounts and organizations**
+
+- AC-21. Sign-up cannot be completed without choosing Individual or Organization, and the account type cannot be changed without going through support.
+- AC-22. An Organization cannot publish a Help Request or Availability Offer until it is validated. Every action on an Organization account is attributed to a named operator in the audit log.
+- AC-23. An Engagement in which an Organization is the Helper cannot be confirmed until at least one attendee is named, and the Requester sees each attendee's display name and identity status before confirming.
+
+**Speed**
+
+- AC-24. In usability testing with pilot-representative users, the median time from starting a new request to publishing it is ≤60 seconds, and ≥80% of participants publish within 2 minutes. For elderly Requesters, tested as a separate group, the median is ≤2 minutes.
+- AC-25. Measured in production: screening returns a decision within 10 seconds for ≥95% of submissions, and opt-in matching notifications are delivered within 1 minute of publication for ≥95% of requests.
+- AC-26. Raising a hand takes exactly one tap. Confirming a non-safety-sensitive request takes one tap per party. Nothing beyond what, where, and when, plus the items that apply under FR-9, is required to publish or confirm.
+
 ---
 
 ## 8. Metrics and Signals
 
 **Primary (does the model work?)**
 
+- **Time to a confirmed helper:** median time from publication to the first mutual confirmation, by category and by account type. This is the headline metric for "quickly find a helping hand."
 - **Completed engagements:** ≥100 over the 3-month pilot.
-- **Confirmation rate:** interest expressed → mutual confirmation. Watch for a low rate indicating the clarification step is too heavy.
+- **Confirmation rate:** raised hand → mutual confirmation. A low rate means confirmation is still too heavy, or Requesters don't trust who is raising a hand.
 - **Completion rate:** confirmed → completed. Target ≥85%.
-- **Time to first confirmation** per published request, by category.
+
+**Speed**
+
+- **Time to publish:** time from starting a new request to publishing it, as measured in the app (target median ≤60 seconds overall and ≤2 minutes for elderly Requesters, AC-24; the elderly split uses the optional age band where users provide it). Also the drop-off rate between starting a request and publishing it.
+- **Time to first raised hand:** median time from publication to the first raised hand.
+- **Unanswered requests:** share of requests with no raised hand within **24 hours**. **A rate above ~30% means matching or liquidity is failing.**
+- **Sign-up completion:** share of people who start sign-up and finish it, split by account type.
+- Technical targets from AC-25: screening latency and notification delivery time.
 
 **Adoption**
 
-- Total registered users and active users; if Tier 1 is active in the pilot, Tier 1 verified users and Tier 1 verification rate among active users.
-- Share of users who act in **both** roles — the core hypothesis that roles belong to interactions.
-- Published requests and Availability Offers; share of requests receiving ≥1 interest within 72 hours (**an unanswered-request rate above ~30% means matching or liquidity is failing**).
+- Total registered and active accounts, split by **Individual** and **Organization**. If Tier 1 is active in the pilot, also Tier 1 verified users and the Tier 1 verification rate among active users.
+- Share of accounts that act in **both** roles, which tests the core hypothesis that roles belong to interactions rather than accounts.
+- Published requests and Availability Offers, split by account type.
+- Organizations: time from sign-up to validation, number of active Organizations, and how many both ask for and offer help.
 
 **Quality**
 
 - Request structuring: share of AI-proposed requests published with no field edited (too high may mean rubber-stamping; too low means the structuring is not useful).
-- Feedback submission rate and per-dimension distributions, especially **accuracy of the request as described** — the strongest signal that structuring works.
-- Post-confirmation cancellation and no-show rates.
+- Feedback submission rate and per-dimension distributions, especially **clarity** (did the request as described match reality), which is the strongest signal that fast structuring hasn't cost accuracy.
+- Post-confirmation cancellation and no-show rates, split by account type.
+- Group requests: share of capacity filled by the scheduled time.
 
 **Safety**
 
@@ -408,7 +465,7 @@ Additional exchange types as explicitly separate engagement models (paid, recipr
 
 **Qualitative**
 
-- Structured interviews with ≥20 Requesters and ≥20 Helpers, focused on: did the situation match the description; did anyone feel pressured to accept; did the trust record actually inform the decision.
+- Structured interviews with ≥20 Requesters, ≥20 Helpers, and the operators of at least 5 Organizations, focused on: did asking or offering help feel as easy as ordering food or a taxi; did the situation match the description; did anyone feel pressured to accept; did the trust record actually inform the decision.
 
 ---
 
@@ -443,15 +500,29 @@ Additional exchange types as explicitly separate engagement models (paid, recipr
 | Q8  | What retention period applies to each data class, and how will deletion requests be reconciled with append-only engagement history?                                            | Counsel + Product — before SRS                              |
 | Q9  | Initial threshold values for exploitation-pattern observation and escalation.                                                                                                  | Pilot Program Lead — before launch, recorded in ops runbook |
 | Q10 | Who staffs appeals and reports during the pilot, and what is the escalation path outside business hours for safety reports?                                                    | Pilot Program Lead                                          |
+| Q11 | Can LLM screening meet the 10-second p95 latency target (AC-25) at the AC-7 quality bar in Hebrew, and what is the fallback if it can't?                                      | Engineering — before FR-5 build                             |
+| Q12 | Can the registry data source support automated Organization validation within minutes, or will most validations need manual review?                                           | Engineering + Pilot Program Lead — before FR-2 build        |
+| Q13 | What is the support process and policy for changing an account's type (Individual ↔ Organization), and what happens to its trust history?                                      | Product — before launch                                     |
+
+**Resolved decisions**
+
+| #   | Decision                                                                                                                                                                       | Where reflected                     |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------- |
+| D1  | Every account must declare at sign-up whether it is an Individual or an Organization.                                                                                          | §1, FR-1, AC-21                     |
+| D2  | Organization accounts can both ask for and offer help. When an Organization helps, it names the attendees before confirmation.                                                | §3, FR-2, FR-6, AC-23               |
+| D3  | v1 Organizations are limited to registered עמותות and חל"צ. Informal community groups join as Individuals for now.                                                             | FR-2, §6.2                          |
+| D4  | Speed targets: about 60 seconds median to publish (about 2 minutes for elderly Requesters), screening ≤10 seconds p95, matching notifications ≤1 minute.                       | FR-4, FR-5, FR-7, §5.3, AC-24, AC-25 |
+| D5  | A request with no raised hand within **24 hours** counts as unanswered.                                                                                                        | §8                                  |
 
 **Assumptions (to be corrected if wrong)**
 
 - **A1.** Active registry status is the bar for organization validation; אישור ניהול תקין is a strengthening badge, not a requirement. _Assumed, not confirmed._
-- **A2.** Organization Representatives act through individually identified personal accounts linked to an organization; there are no organization logins in the MVP. _Assumed._
+- **A2.** Organization operators sign in with their own Individual accounts and act on behalf of the Organization account. There is no shared organization password, and every action is attributed to a named operator. _Assumed._
 - **A3.** A third-party verification vendor with adequate Israeli ID coverage exists at viable pilot cost; if not, Tier 1 verification is deferred and the pilot launches with the strongest feasible alternative identity signal.
 - **A4.** LLM screening quality in Hebrew reaches the AC-7 bar; if not, Hebrew screening needs a rules-based backstop and the timeline changes.
-- **A5.** Users will tolerate the clarification step before confirmation. This is the core friction risk; if the confirmation rate is very low, the model — not the UI — is what needs revisiting.
-- **A6.** Pilot liquidity is achievable only if a launch partner and community outreach seed enough early requests and helpers. This is unproven and should be measured explicitly.
+- **A5.** Lightweight confirmation (what, when, and where, plus only the items that apply) gives both parties enough clarity to show up and do the right thing. If clarity ratings or completion rates are low, the required terms in FR-9 need to grow, and speed is traded for accuracy.
+- **A6.** Pilot liquidity is achievable only if a launch partner and community outreach seed enough early requests and helpers. This is unproven and should be measured explicitly. Organizations that offer help are expected to be an important early source of helpers.
+- **A7.** Requesters will accept the extra step of seeing named attendees before confirming an Organization as Helper, and Organizations will be able to name attendees in advance.
 
 ---
 
@@ -461,20 +532,25 @@ Additional exchange types as explicitly separate engagement models (paid, recipr
 
 **Do not use this PRD for:** database schema, API design, service boundaries, mobile architecture, model/prompt selection, or test plans. Entity names in §5.2 are product vocabulary, not a schema.
 
-**Belongs in the technical plan (`srs.md`):** data model and access-control implementation of purpose-bound disclosure; append-only engagement history and terms versioning; screening pipeline design, ruleset versioning, and the evaluation harness for AC-7/AC-8; matching and ranking implementation; identity vendor integration and PII segregation; notification architecture; RTL and localization approach; operator console; observability for the §8 metrics.
+**Belongs in the technical plan (`srs.md`):** account model for Individual and Organization accounts, including operators acting on behalf of an Organization and named attendees; data model and access-control implementation of purpose-bound disclosure; append-only engagement history and terms versioning; screening pipeline design, ruleset versioning, latency budget, and the evaluation harness for AC-7/AC-8/AC-25; registry integration and Organization validation flow; matching, ranking, and near-real-time notification delivery; identity vendor integration and PII segregation; RTL and localization approach; operator console; observability for the §8 metrics, including the speed metrics.
 
 **Highest-risk areas — plan these first:**
 
-1. Server-side enforcement of staged disclosure and purpose-bound privacy (AC-11, AC-12) — a leak here is unrecoverable reputationally.
-2. Bilateral confirmation and terms versioning (AC-1, AC-3) — the conceptual core; getting the state machine wrong invalidates the pilot.
-3. Screening quality in Hebrew (AC-7, AC-8) — a launch gate with a real chance of failing.
-4. Liability-sensitive flows for safety-sensitive engagements — the product is brokering help between strangers, not just scheduling events.
-5. Append-only history with deletion rights (AC-13) — this remains a genuine pre-SRS design conflict.
+1. Server-side enforcement of staged disclosure and purpose-bound privacy (AC-11, AC-12). A leak here does reputational damage that can't be undone. Organization accounts make this harder, because disclosure must reach only the handling operator and named attendees, not every operator.
+2. Bilateral confirmation and terms versioning (AC-1, AC-3, AC-26). This is the conceptual core: getting the state machine wrong invalidates the pilot. It must stay at one tap per party without weakening the guarantee that both parties confirmed the same terms version.
+3. Screening quality **and speed** in Hebrew (AC-7, AC-8, AC-25). This is a launch gate with a real chance of failing, and the 10-second budget may conflict with the quality bar (Q11).
+4. The account model (AC-21 – AC-23). Individual vs. Organization accounts, operators acting on an Organization's behalf, and attributing every action to a named person all shape identity, permissions, and audit throughout the system. Retrofitting this later is expensive.
+5. Liability-sensitive flows for safety-sensitive engagements. The product is brokering help between strangers, not just scheduling events.
+6. Append-only history with deletion rights (AC-13). This remains a genuine pre-SRS design conflict.
 
 **Suggested first implementation-planning prompt:**
 
-> Using `docs/2026-09-07-handraise-mvp/prd.md`, produce a technical plan for the Handraise MVP. Start with the domain model and state machines for `HelpRequest`, `Engagement`, and `EngagementTerms`, showing every transition, the actor permitted to trigger it, and how bilateral confirmation and material-change re-consent are enforced server-side. Then design the purpose-bound disclosure model: what each viewer role can read at each engagement state, enforced at the data-access layer rather than the UI. Include the policy hooks required for the prohibited/safety-sensitive taxonomy and organization-eligibility checks. Call out where AC-13 (deletion) conflicts with the append-only history requirement and propose a resolution. Do not design the mobile UI yet.
+> Using `docs/2026-09-07-handraise-mvp/prd.md`, produce a technical plan for the Handraise MVP. Start with the account model: Individual and Organization accounts, how operators act on behalf of an Organization, and how every action is attributed to a named person. Then define the domain model and state machines for `HelpRequest`, `Engagement`, and `EngagementTerms`, showing every transition, the actor permitted to trigger it, and how bilateral confirmation and material-change re-consent are enforced server-side while keeping confirmation to one tap per party. Then design the purpose-bound disclosure model: what each viewer role can read at each engagement state, including Organization operators and named attendees, enforced at the data-access layer rather than the UI. Include the policy hooks required for the prohibited/safety-sensitive taxonomy and organization-eligibility checks, and a latency budget showing how screening (≤10 s p95) and matching notifications (≤1 min) meet their targets. Call out where AC-13 (deletion) conflicts with the append-only history requirement and propose a resolution. Do not design the mobile UI yet.
 
 ---
 
-**Reviewer note:** §5, FR-5 records a deliberate amendment to the concept brief's "AI never rejects a request" principle. If that principle is non-negotiable, FR-5, AC-7, and the moderation staffing assumption all need to be reopened together.
+**Reviewer notes:**
+
+- **Screening amendment.** §5, FR-5 records a deliberate amendment to the concept brief's "AI never rejects a request" principle. If that principle is non-negotiable, FR-5, AC-7, and the moderation staffing assumption all need to be reopened together.
+- **Speed as the mission.** This revision reframes the product around speed: quickly find a helping hand, or quickly give one. Confirmation is now lightweight (FR-9) instead of a full clarification checklist, and the speed targets are acceptance criteria (AC-24 – AC-26). If pilot clarity ratings or completion rates fall, FR-9, A5, and AC-26 need to be reopened together. If screening cannot meet its latency target (Q11), FR-5 and AC-25 need to be reopened together.
+- **Account types.** Every account now declares at sign-up whether it is an Individual or an Organization (D1). Organizations are full accounts that can ask for and offer help, operated by named operators (FR-2, A2). This replaces the earlier model in which organization representatives acted only through personal accounts. Changes to it affect FR-1, FR-2, FR-10, FR-14, AC-21 – AC-23, and the disclosure model together.
